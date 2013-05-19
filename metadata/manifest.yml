@@ -1,6 +1,6 @@
-Name: perl
-Cartridge-Short-Name: PERL
-Display-Name: Perl 5.10
+Name: perlv2
+Cartridge-Short-Name: PERLV2
+Display-Name: Perlv2 5.10
 Description: "Perl is a general-purpose server-side scripting language originally designed for Web development to produce dynamic Web pages. Popular development frameworks include: CakePerl, Zend, Symfony, and Code Igniter."
 Version: '5.10'
 License: "GPL v2"
@@ -10,7 +10,7 @@ Cartridge-Version: 0.0.1
 Cartridge-Vendor: nonhat
 Categories:
   - service
-  - perl
+  - perlv2
   - web_framework
 Website: http://www.perl.org
 Help-Topics:
@@ -44,9 +44,9 @@ Cart-Data:
     Type: environment
     Description: "Unique ID which identified the gear. This value changes between gears."
 Provides:
-  - perl-5.10
-  - "perl"
-  - "perl(version) = 5.10"
+  - perlv2-5.10
+  - "perlv2"
+  - "perlv2(version) = 5.10"
 Publishes:
   publish-http-url:
     Type: "NET_TCP:httpd-proxy-info"
@@ -73,7 +73,7 @@ Scaling:
   Max: -1
 Group-Overrides:
   - components:
-    - perl-5.10
+    - perlv2-5.10
     - web_proxy
 Endpoints:
   - Private-IP-Name:   IP
