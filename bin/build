@@ -3,7 +3,7 @@
 if [ -f ${OPENSHIFT_REPO_DIR}.openshift/markers/force_clean_build ]
 then
     echo ".openshift/markers/force_clean_build found!  Rebuilding perl modules" 1>&2
-    rm -rf  ${OPENSHIFT_PERL_DIR}/perl5lib/* ~/.cpanm/*
+    rm -rf  ${OPENSHIFT_PRELV2_DIR}/perl5lib/* ~/.cpanm/*
 fi
 
 LINUX_DISTRO=$(</etc/redhat-release)
@@ -37,6 +37,6 @@ then
         DISABLE_TEST=""
     fi
 
-    cpanm $DISABLE_TEST $MIRROR -L ${OPENSHIFT_PERL_DIR}perl5lib "$f"
+    cpanm $DISABLE_TEST $MIRROR -L ${OPENSHIFT_PRELV2_DIR}perl5lib "$f"
   done
 fi
