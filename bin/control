@@ -16,10 +16,13 @@ function start() {
 }
 
 function stop() {
+  echo "STOP"
+  ls -lh $HTTPD_PID_FILE
   /usr/sbin/httpd -C "Include $OPENSHIFT_PERLV2_DIR/etc/conf.d/*.conf" -f $HTTPD_CFG_FILE -k stop
 }
 
 function restart() {
+  ls -lh $HTTPD_PID_FILE
   /usr/sbin/httpd -C "Include $OPENSHIFT_PERLV2_DIR/etc/conf.d/*.conf" -f $HTTPD_CFG_FILE -k restart
 }
 
