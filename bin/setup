@@ -13,6 +13,15 @@ mkdir -p $OPENSHIFT_PERL_DIR/etc
 cp -r $OPENSHIFT_PERL_DIR/versions/$version/etc/* $OPENSHIFT_PERL_DIR/etc
 mkdir -p $OPENSHIFT_HOMEDIR/.cpanm
 client_message "Try to modify manifest file"
+ls -lh $OPENSHIFT_PERL_DIR/metadata/
 echo "TRYTRY"
 echo "Append the words to manifest file" >> $OPENSHIFT_PERL_DIR/metadata/manifest.yml
-client message "Exit code is $?"
+tail -f $OPENSHIFT_PERL_DIR/metadata/manifest.yml
+echo "conf.d/" >>  $OPENSHIFT_PERL_DIR/metadata/managed_files.yml
+echo "OPENSHIFT_PERL_IDENT is $OPENSHIFT_PERL_IDENT"
+echo "hatnot:testperl:5.10:0.0.1" >$OPENSHIFT_PERL_DIR/env/OPENSHIFT_PERL_IDENT
+echo "NEW value for OPENSHIFT_PERL_IDNET is"
+cat $OPENSHIFT_PERL_DIR/env/OPENSHIFT_PERL_IDENT
+
+
+#client message "Exit code is $?"
