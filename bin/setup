@@ -1,5 +1,5 @@
 #!/bin/bash -eux
-#source $OPENSHIFT_CARTRIDGE_SDK_BASH
+source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
 #set +xe
 case "$1" in
