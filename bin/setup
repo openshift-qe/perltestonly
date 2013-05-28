@@ -15,9 +15,9 @@ mkdir -p $OPENSHIFT_HOMEDIR/.cpanm
 client_message "Try to modify manifest file"
 ls -lh $OPENSHIFT_PERL_DIR/metadata/
 echo "TRYTRY"
-echo "Append the words to manifest file" >> $OPENSHIFT_PERL_DIR/metadata/manifest.yml
-tail -f $OPENSHIFT_PERL_DIR/metadata/manifest.yml
-echo "conf.d/" >>  $OPENSHIFT_PERL_DIR/metadata/managed_files.yml
+echo "Invalid entry: Append the words to manifest file" >> $OPENSHIFT_PERL_DIR/metadata/manifest.yml
+tail -n 10  $OPENSHIFT_PERL_DIR/metadata/manifest.yml
+echo "conf.d" >> $OPENSHIFT_PERL_DIR/metadata/managed_files.yml
 echo "OPENSHIFT_PERL_IDENT is $OPENSHIFT_PERL_IDENT"
 echo "hatnot:testperl:5.10:0.0.1" >$OPENSHIFT_PERL_DIR/env/OPENSHIFT_PERL_IDENT
 echo "NEW value for OPENSHIFT_PERL_IDNET is"
